@@ -46,6 +46,8 @@ export const parseText = (text: string, ext: string): any => {
     switch (ext) {
       case ".json":
         return JSON.parse(text);
+      case ".tmpl":
+        return JSON.parse(text);
       case ".yaml":
         return yaml.load(stripAWSTags(text));
       case ".yml":
